@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header-section">
+        <div class="container">
+            <div class="row row-gutter-0 align-items-center">
+                <div class="col-6">
+                    <div class="logo">
+                        <img src="logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="login">
+                        <input id="usuario" type="text" placeholder="Ingrese su usuario..">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="outer">
+                        <div class="profile">
+                            <img src="profile-photo.jpg" alt="logo">
+                        </div>
+                        <div class="cv">
+                            <ul>
+                                <h4><b> Jane Doe</b></h4>
+                                <li><b>Email: </b>jane_doe@email.com</li>
+                                <li><b>Fecha de nacimiento: </b>01/05/1996</li>
+                                <li><b>Teléfono: </b>918-936-9585</li>
+                                <li><b>Ciudad: </b>Tokyo, Japon</li>
+                                <li>Trabajando en Lawn N</li>
+                            </ul>
+                        </div>
+                        <div class="follow">
+                            <button class="btn-follow">Seguir</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card post-card">
+                    <h5>Publicado hace 1 semana</h5>
+                    <img src="post.jpg" alt="logo">
+                    <div class="likes">
+                        <button class="btn-like" id="btn-like">Me gusta</button>
+                        <p class="likes"><b id="likes-counter">200</b> Likes</p>
+                    </div>
+
+
+                    <div class="coments mt-4" id="comentarios">
+                        <h4>Comentarios</h4>
+                        <p><b>Juan Perez</b> ¡Wow, esa foto Tokio es impresionante! <span>&#127751;&#10024;</span></p>
+                        <p><b>Kathleen J Rennie</b> ¡Esta foto de Tokio es simplemente espectacular! Me trae tantos
+                            recuerdos</p>
+                        <p><b>Diana Bell</b> ¡Espero que algun dia pueda ver Tokio en persona!</p>
+
+
+                    </div>
+                    <div class="new-coments">
+                        <input class="coment" type="text" id="comentario" name="comentario"
+                            placeholder="Deja tu comentario...">
+                        <input class="btn-follow" type="button" value="Comentar" onclick="agregarComentario()">
+                        <span id="error-usuario" style="display:none; color:red;">Por favor, ingrese su nombre de
+                            usuario.</span>
+                        <span id="comentario-vacio" style="display:none; color:red;">Por favor, ingrese un
+                            comentario.</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card p-50">
+                    <h4>Sobre mí</h4>
+                    <p class="fs-16">
+                        ¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y emocionante ciudad de Tokio, Japón.
+                        Me encanta capturar la escencia de la vida urbana a través de mi lente, explorando el contraste
+                        entre la arquitectura moderna y las tradiciones centenarias que conviven en esta metropolis
+                        única. Desde rascacielos deslumbrantes y calles bulliciosas hasta templos serenos y jardines
+                        tranquilos, encuentro inspiración en cada rincón de esta increible ciudad.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
