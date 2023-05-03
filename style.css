@@ -137,7 +137,12 @@ input {
     padding: 10px 15px 10px 15px;
     border-radius: 10px;
 }
-
+.btn-coment{
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+}
 ul {
     line-height: 25px;
 }
@@ -159,3 +164,64 @@ ul {
     margin-left: 10px;
     font-weight: bold;
 }
+
+@media (max-width: 767px) {
+  
+  .card{
+    padding: 30px 30px 30px 70px;
+  }
+  .follow {
+    top: 20px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .cv ul{
+    padding-left: 0;
+  }
+  .cv h4{
+    padding-left: 3rem;
+  }
+   
+  .btn-like {
+    font-size: 12px;
+    padding: 5px 10px;;
+  }
+  .btn-coment{
+    margin-top: 10px;
+  }
+  .login {
+    float: none;
+    margin: 10px;
+  }
+  .logo img{
+    padding: 10px;
+
+  }
+  .card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  .profile {
+    align-self: center;
+  }
+  
+  .cv {
+    align-self: start;
+    margin-top: 20px;
+  }
+  
+ 
+  
+  .post-card {
+    padding: 20px;
+  }
+  
+  .post-card img {
+    margin-top: 5px;
+    width: 100%;
+  }
+  
+}
+

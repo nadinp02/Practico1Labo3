@@ -33,12 +33,14 @@ function agregarComentario() {
         errorUsuario.style.display = "none";
     }
 
+
     if (comentario.trim() === "") {
         comentarioVacio.style.display = "block";
         return;
     } else {
         comentarioVacio.style.display = "none";
     }
+
 
     var nuevoComentario = document.createElement("div");
     nuevoComentario.classList.add("comentario");
@@ -58,7 +60,7 @@ function agregarComentario() {
 
 
 //Me gusta
-var liked = false;
+var liked = false; 
 var likesCounter = document.getElementById("likes-counter"); 
 var btnLike = document.getElementById("btn-like"); 
 

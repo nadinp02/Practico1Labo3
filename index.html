@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Globo</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -16,14 +16,14 @@
     <header class="header-section">
         <div class="container">
             <div class="row row-gutter-0 align-items-center">
-                <div class="col-6">
+                <div class="col-xs-12 col-sm-12 col-lg-6">
                     <div class="logo">
                         <img src="logo.png" alt="logo">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-xs-12 col-sm-12 col-lg-6">
                     <div class="login">
-                        <input id="usuario" type="text" placeholder="Ingrese su usuario..">
+                        <input id="usuario" type="text" placeholder="Ingresa tu usuario..">
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                                 <li><b>Fecha de nacimiento: </b>01/05/1996</li>
                                 <li><b>Teléfono: </b>918-936-9585</li>
                                 <li><b>Ciudad: </b>Tokyo, Japon</li>
-                                <li>Trabajando en Lawn N</li>
+                                <li>Trabajando en <b>Lawn N</b></li>
                             </ul>
                         </div>
                         <div class="follow">
@@ -56,7 +56,7 @@
 
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-xs-12 col-sm-12 col-lg-8">
                 <div class="card post-card">
                     <h5>Publicado hace 1 semana</h5>
                     <img src="post.jpg" alt="logo">
@@ -78,7 +78,7 @@
                     <div class="new-coments">
                         <input class="coment" type="text" id="comentario" name="comentario"
                             placeholder="Deja tu comentario...">
-                        <input class="btn-follow" type="button" value="Comentar" onclick="agregarComentario()">
+                        <input class="btn-coment" type="button" value="Comentar" onclick="agregarComentario()">
                         <span id="error-usuario" style="display:none; color:red;">Por favor, ingrese su nombre de
                             usuario.</span>
                         <span id="comentario-vacio" style="display:none; color:red;">Por favor, ingrese un
@@ -87,7 +87,7 @@
 
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-xs-12 col-sm-12 col-lg-4">
                 <div class="card p-50">
                     <h4>Sobre mí</h4>
                     <p class="fs-16">
