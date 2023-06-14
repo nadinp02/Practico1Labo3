@@ -149,11 +149,14 @@ ul {
 .coment{
     background-color: #f4f4f5;
     border-color: #f4f4f5;
-    width: 80%;
+    width: 85%;
     padding: 10px 20px 10px 20px;
     border: 2px solid transparent;
     border-radius: 10px;
     border-color: transparent;
+}
+.btn-coment{
+margin-left:10px
 }
 .btn-borrar{
     background-color: #f4f4f5;
@@ -166,6 +169,9 @@ ul {
 }
 #error-usuario, #comentario-vacio{
 display:none; color:red;
+}
+.comment-form{
+  margin-top: 20px;
 }
 
 

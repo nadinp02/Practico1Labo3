@@ -1,28 +1,64 @@
 app.component('comment-list', {
     props: {
-        comments: {
-            type: Array,
-            required: true
+        user:{
+            type:String,
+            required:true
+        },
+        userComment:{
+            type:Array,
+            required:true
         }
+        
     },
-    template:
-        /*html*/
-        `
-    <div class="coments mt-4" id="comentarios">
-    <h4>Comentarios</h4>
-    <p><b>Juan Perez</b> ¡Wow, esa foto Tokio es impresionante! <span>&#127751;&#10024;</span></p>
-    <p><b>Kathleen J Rennie</b> ¡Esta foto de Tokio es simplemente espectacular! Me trae tantos
-        recuerdos</p>
-    <p><b>Diana Bell</b> ¡Espero que algun dia pueda ver Tokio en persona!</p>
+    template:/*html*/
+    `   <div class="new-coments">
+    <form class="comment-form" @submit.prevent="onSubmit">
+        <input class="coment" id="comment" v-model="comment" type="text" :placeholder="placeholder">
+        <button class="button btn-coment" id="comment" type="Submit">Comentar</button>
+    </form>
+        <div class="col d-flex justify-content "> 
+            <div class="alert alert-danger p-2 m-2" v-if="loged">Ingrese un nombre de usuario</div>
+            <div class="alert alert-danger p-2 m-2" v-if="commented">Error! Escribe un comentario</div>
+        </div>
+        </div>`,
+        
+        data(){
+            return{
+                comment:'',
+                placeholder:'Deja tu comentario',
+                loged: '',
+                commented:'',
 
-            <p v-for="(comment, index) in comments" :key="index">
-            {{ comment.comment }}
-            </p>
-
-    </div>
-
-
-</div>
-
-    `
+            }
+        },
+        methods:{
+            //* AGREGAR COMENTARIO *//
+            onSubmit() {
+                    if (this.user === '') {
+                        this.loged = true;
+                        setTimeout(() => {
+                          this.loged = false;
+                        }, 2000);
+                        return; 
+                      }
+                    
+                      if (this.comment === '') {
+                        this.commented = true;
+                        setTimeout(() => {
+                          this.commented = false;
+                        }, 2000);
+                        return; 
+                      }
+                      let userComment = {
+                          name: this.user,
+                          comment: this.comment
+                        };
+                        this.$emit('submit-comment', userComment);
+                        this.name = '';
+                        this.comment = '';      
+            
+              }
+             
+        }
+    
 })

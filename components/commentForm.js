@@ -1,37 +1,34 @@
 app.component('comment-form', {
-    template:
-        /*html*/
-        `<form class="comment-form" @submit.prevent="onSubmit">
-    
-<div class="new-coments">
-    <input class="coment" id="comment" v-model="comment" placeholder="Deja tu comentario...">
-    <input class="button btn-coment" type="button" value="Submit">
-    <span id="error-usuario">Por favor, ingrese su nombre de
-        usuario.</span>
-    <span id="comentario-vacio"> {{ comment.user }} {{ emptyComment }}</span>
-</div>
-</form>`,
-    data() {
-        return {
-            comment: '',
-            emptyComment: '',
-            user: ''
-
+    props: {
+        comments:{
+            type:Array,
+            required:true
+        },
+        user:{
+            type:String,
+            required:true
         }
     },
-    methods: {
-        onSubmit() {
-            if (this.comment === '') {
-                emptyComment = 'Por favor, ingrese un comentario'
-                return
+
+    template:
+    /*html*/
+    ` <div class="row comentarios mb-1"  v-for="(comment, index) in comments" :key="index" > 
+        <div class="col-9 m-1 mb-1">
+        <b class="me-2 fw-bold text-primary"> {{ comment.name }}</b> <span>{{ comment.comment }}</span> 
+        </div>
+        <div class="col d-flex justify-content-end "> 
+            <button class="btn-borrar p-2" id="eliminar" @click="eliminar(comment)">Eliminar</button>
+        </div>
+        </div>`,
+
+    methods:{
+        //* ELIMINAR COMENTARIO *//
+        eliminar(comment){
+            const index = this.comments.indexOf(comment);
+            if (index !== -1){
+                this.comments.splice(index, 1);
             }
-            // else if !isset usuario = Por favor, ingrese su nombre de usuario
-            let postComment = {
-                comment: this.comment,
-                nadin: 'usuarioIngresado'
-            }
-            this.$emit('comment-submitted', postComment)
-            this.comment = ''
         }
     }
 })
+    

@@ -28,8 +28,6 @@ app.component('profile-display', {
         </div>
     </div>
     </div>
-
-
     `,
     data() {
         return {
@@ -42,10 +40,10 @@ app.component('profile-display', {
             image: './assets/images/profile-photo.jpg',
             btnFollow: 'Seguir',
             user: ''
-            
         }
     },
     methods: {
+        //* BOTÓN SEGUIR *//
         follow() {
             if (this.btnFollow === 'Seguir') {
                 this.btnFollow = 'Dejar de seguir';
@@ -54,7 +52,4 @@ app.component('profile-display', {
             }
         },
     },
-
-
-
 })
